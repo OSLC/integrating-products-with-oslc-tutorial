@@ -9,7 +9,7 @@ This tutorial explains how to implement OSLC consumers and providers by examinin
 
 ## Audience
 
-This tutorial is for people who will be writing code to implement OSLC consumers and providers; we assume the the following about you:
+This tutorial is for people who will be writing code to implement OSLC consumers and providers; we assume the following about you:
 
 + You understand the basics of software development, web architecture, HTTP, [linked data](http://youtu.be/40mjwqGEKBU), and [RDF](http://www.youtube.com/watch?v=Nk9TOx1sBUk&feature=share&list=PLpqpu1CS6Rj4dRKWX1UICKseBq_20nk6k)
 + You want to learn more about OSLC
@@ -17,10 +17,14 @@ This tutorial is for people who will be writing code to implement OSLC consumers
 + You can understand server-side programming languages, particularly in Java and JSP (see below)
 + You want to learn more about how [Eclipse Lyo](http://www.eclipse.org/lyo/) can help you more quickly develop OSLC-driven integrations
 
-<div class="callout-box">
-<strong>On the choice of server-side programming language</strong>: Although our sample applications use Java and JSP, many of the methods of implementing OSLC are the same regardless of your choice of server-side programming-language. Later versions of this document might expand to other languages and platforms. OSLC is a community effort and we'd love your help in adding examples in different programming languages to this tutorial (or other material) to help those on other platforms such as Perl, PHP, Python, Ruby, or .Net.
+<div class="notice">
+  <div class="header">
+    <h3 class="title">On the choice of server-side programming language</h3>
+  </div>  
+  <div class="body">
+    Although our sample applications use Java and JSP, many of the methods of implementing OSLC are the same regardless of your choice of server-side programming-language. Later versions of this document might expand to other languages and platforms. OSLC is a community effort and we'd love your help in adding examples in different programming languages to this tutorial (or other material) to help those on other platforms such as Perl, PHP, Python, Ruby, or .Net.  
+  </div>
 </div>
-
 
 ## The Sample applications
 
