@@ -19,8 +19,8 @@ You can learn more about Delegated UI in the [OSLC Primer](http://open-services.
 
 ## Parsing the Service Provider Documents
 
-<div class="note">
-<p><strong>Note</strong>: The NinaCRM sample application does _not_ retrieve a Service Provider document and parse its contents to locate Delegated UIs; for simplicity, the URLs for the delegated UIs are hard-coded in the <code>index.jsp</code> file. </p>
+<div class="notice">
+<p><strong>Note</strong>: The NinaCRM sample application does <em>not</em> retrieve a Service Provider document and parse its contents to locate Delegated UIs; for simplicity, the URLs for the delegated UIs are hard-coded in the <code>index.jsp</code> file. </p>
 <p>A better implementation would be one that properly parses the Service Provider and thus could work with any OSLC Provider.</p>
 </div>
 
@@ -113,8 +113,8 @@ Note that each button uses the Dojo/Dijit button framework and launches a JavaSc
 
 Next, we add the `selectDialog()` and `createDialog()` JavaScript methods.
 
-<div class="tip">
-The following methods use only the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification?sortcol=table;up=#Post_Message_and_Window_Name_pro">Post Message Protocol from the OSLC specification</a> and will accordingly only work in newer browsers. To support older browsers, you should also implement the Window Name protocol. For more information, see the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification?sortcol=table;up=#Post_Message_and_Window_Name_pro">OSLC Core Specification</a> and our <a href="http://open-services.rtp.raleigh.ibm.com/resources/tutorials/integrating-products-with-oslc/implementing-an-oslc-provider/providing-a-delegated-ui-for-selection/">our implementation of Delegated UIs</a>.
+<div class="notice tip">
+<p>The following methods use only the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification?sortcol=table;up=#Post_Message_and_Window_Name_pro">Post Message Protocol from the OSLC specification</a> and will accordingly only work in newer browsers. To support older browsers, you should also implement the Window Name protocol. For more information, see the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification?sortcol=table;up=#Post_Message_and_Window_Name_pro">OSLC Core Specification</a> and our <a href="http://open-services.rtp.raleigh.ibm.com/resources/tutorials/integrating-products-with-oslc/implementing-an-oslc-provider/providing-a-delegated-ui-for-selection/">our implementation of Delegated UIs</a>.</p>
 </div>
 
 Because the end-result of both actions is the same – we will be adding a link to either a new or existing bug in Bugzilla – both methods invoke the same `postMessageProtocol()` method with the appropriate URL:
@@ -218,18 +218,18 @@ With all these in place, you should now be able to add links to our incident pag
 
 Here's the dialog for selection:
 
-![Sample delegated dialog for selecting bugs on the incident page](/uploads/resources/nina-select.png)
+![Sample delegated dialog for selecting bugs on the incident page](http://open-services.net/uploads/resources/nina-select.png)
 
 You can search for bugs directly:
 
-![Using the delegated dialog for selection to search for water](/uploads/resources/nina-query.png)
+![Using the delegated dialog for selection to search for water](http://open-services.net/uploads/resources/nina-query.png)
 
 You can also create new bugs right from the page:
 
-![Dialog for creating new bugs on the incident page](/uploads/resources/nina-create-1.png)
+![Dialog for creating new bugs on the incident page](http://open-services.net/uploads/resources/nina-create-1.png)
 
 Either way, the new or selected bug appears on the page (complete with the ability to see a UI preview of the bug):
 
-![Bug #3266 added to the incident page](/uploads/resources/nina-added-1.png)
+![Bug #3266 added to the incident page](http://open-services.net/uploads/resources/nina-added-1.png)
 
 At this point, we've completed our first milestone goals: the CRM system now uses links,  OSLC UI Preview, and OSLC delegated dialogs to make it faster for support reps to find and create bugs.

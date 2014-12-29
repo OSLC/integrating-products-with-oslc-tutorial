@@ -5,8 +5,8 @@ Now that we have the basic services and resources defined for BugzillaChangeRequ
 
 For example, a user of the NinaCRM product will be able to search for and add links to related bugs in Bugzilla without leaving the NinaCRM interface.
 
-<div class="callout-box">For more information on OSLC delegated UIs, see the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Delegated_User_Interface_Dialogs
-">section about them in the OSLC core specification</a>.</div>
+<div class="notice"><p>For more information on OSLC delegated UIs, see the <a href="http://open-services.net/bin/view/Main/OslcCoreSpecification#Delegated_User_Interface_Dialogs
+">section about them in the OSLC core specification</a>.</p></div>
 
 Because delegated UI dialogs must accept user input and interact with Bugzilla to select or create bugs, they are more complex than collecting and describing bugs. Here's how we'll approach the process:
 
@@ -227,7 +227,7 @@ We determine whether or not we want to use Window Name or postMessage by looking
 
 You can further explore the `respondWithPostMessage()` and `respondWithWindowName()` methods in `bugzilla.js` to see how we send the data to the requesting window – it's taken almost entirely from the examples in the OSLC Core specification.
 
-<div class="tip">
+<div class="notice tip">
 <p>
 Note that the selection dialog above will show all Change Requests available for one Bugzilla Product. Some additional work could be done to make this more useful by doing some filtering up-front. For example, it might be useful to show only Change Requests that are assigned to the current user, or to prioritize recently created Change Requests.
 </p>

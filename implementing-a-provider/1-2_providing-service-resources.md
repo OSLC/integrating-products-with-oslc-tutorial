@@ -138,7 +138,7 @@ And near the bottom of the file, we loop through the service providers in the ca
 
 If you're running the example applications, you can see this in action at <http://localhost:8080/OSLC4JBugzilla/services/catalog/singleton>.
 
-![Screen capture of the Service Provider Catalog in a web browser](/uploads/resources/serviceprovidercatalog-html.png)
+![Screen capture of the Service Provider Catalog in a web browser](http://open-services.net/uploads/resources/serviceprovidercatalog-html.png)
 
 ## Retrieving and displaying details about a Service Provider
 
@@ -239,7 +239,7 @@ If you're running the example applications, browse to <http://localhost:8080/OSL
 
 Click on the link for any Service Provider (the number of Service Providers you'll see depends on the number of available Products on your Bugzilla server). You should see an HTML page with links to the available REST services, similar to this:
 
-![Screen capture of a Service Provider in a web browser](/uploads/resources/serviceprovider-html.png)
+![Screen capture of a Service Provider in a web browser](http://open-services.net/uploads/resources/serviceprovidercatalog-html.png)
 
 
 

@@ -236,7 +236,7 @@ Let's try it out! From the Service Provider Catalog, you can navigate to a list 
 
 You should see a page with links to the bugs, similar to this:
 
-![An HTML page in a browser showing a list of Bugzilla bugs](/uploads/resources/collection-of-bugs-html.png)
+![An HTML page in a browser showing a list of Bugzilla bugs](http://open-services.net/uploads/resources/collection-of-bugs-html.png)
 
 ### Forwarding HTML requests for single Bugzilla bugs
 

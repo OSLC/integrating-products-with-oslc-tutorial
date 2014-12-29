@@ -4,7 +4,7 @@ In this section, we'll add the ability to quickly preview linked resources to th
 
 OSLC UI Previews makes it easy to show an in-context preview of a resource when a user "hovers" over the link to that resource, so the user can see what is at the other end and decide whether or not to click through to get more information. The illustration below shows UI Preview in action on IBM Rational's Jazz.net site. A user has put his mouse-pointer over a link to a Build and a preview of that build has appeared on the screen:
 
-![A pop-up window displays a preview of a resource when the user hovers over a link to that resource](/images/ill_2.jpg)
+![A pop-up window displays a preview of a resource when the user hovers over a link to that resource](http://open-services.net/images/ill_2.jpg)
 
 Here's how UI Preview works in an OSLC consumer: 
 
@@ -71,7 +71,7 @@ The NinaCRM application includes a simple proxy service; we won't look at the pr
 
 With the simple proxy service, you can send the URL `http://example.com/anything/etc` to the proxy with the following URL:
 
-   http://localhost:8181/ninacrm/proxy?uri=http://example.com/anything/etc
+    http://localhost:8181/ninacrm/proxy?uri=http://example.com/anything/etc
 
 The proxy service will call the URL specified with the same method and headers as the original request and the return the results.
 
@@ -83,7 +83,7 @@ With a proxy service, we can now implement the rest of UI Previews in the browse
 
 Open <http://localhost:8181/ninacrm/> in a web browser. You'll see a sample incident:
 
-![Sample incident #676 in the NinaCRM sample application](/uploads/resources/nina-start.png)
+![Sample incident #676 in the NinaCRM sample application](http://open-services.net/uploads/resources/nina-start.png)
 
 At the bottom, find the **Related Defects** heading. This is where we show links to related bugs in Bugzilla; the HTML is a simple unordered list:
 
@@ -213,7 +213,7 @@ If you're running the sample applications, open <http://localhost:8181/ninacrm/>
 
 Hover over any of the **Related Defects** links. (You will probably have to log in with your Bugzilla username and password.) You should see a tooltip appear with the small preview of the bug:
 
-![Small UI preview of a bug that is linked from the sample incident](/uploads/resources/nina-preview.png)
+![Small UI preview of a bug that is linked from the sample incident](http://open-services.net/uploads/resources/nina-preview.png)
 
 
 Next up, we'll explore how to use OSLC Delegated UIs to allow our support reps to both select and create new bugs in Bugzilla without leaving the NinaCRM application.

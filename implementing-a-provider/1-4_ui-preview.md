@@ -189,6 +189,6 @@ For example, with a product ID of **1** and a bug ID of **10**:
     
 You should see a small table with details about the bug, similar to this:
 
-![A small table of information about a bug in the browser](/uploads/resources/uipreview-html.png)
+![A small table of information about a bug in the browser](http://open-services.net/uploads/resources/uipreview-html.png)
 
 Now, given a URI link to a resource, we can provide some human-readable and usable presentations for that link, including a quick peak into the Bug using UI Preview. Later in this tutorial we'll explore how other applications can discover and display these previews.

@@ -38,39 +38,39 @@ You can explore this further with the Poster plugin and the Bugzilla adapter [wh
 
 Here's a sample Bugzilla bug represented as an RDF/XML BugzillaChangeRequest resource:
 
-	<?xml version="1.0" encoding="UTF-8"?>
-	<rdf:RDF
-		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-		xmlns:oslc_data="http://open-services.net/ns/servicemanagement/1.0/"
-		xmlns:oslc_rm="http://open-services.net/ns/rm#"
-		xmlns:oslc="http://open-services.net/ns/core#"
-		xmlns:bugz="http://www.bugzilla.org/rdf#"
-		xmlns:oslc_scm="http://open-services.net/ns/scm#"
-		xmlns:foaf="http://xmlns.com/foaf/0.1/"
-		xmlns:oslc_qm="http://open-services.net/ns/qm#"
-		xmlns:dcterms="http://purl.org/dc/terms/"
-		xmlns:oslc_cm="http://open-services.net/ns/cm#"
-		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
-	  <rdf:Description rdf:about="http://localhost:8080/OSLC4JBugzilla/services/1/changeRequests/17">
-		<dcterms:contributor rdf:resource="http://localhost:8080/OSLC4JBugzilla/person?mbox=tara%40bluemartini.com"/>
-		<bugz:operatingSystem>Windows NT</bugz:operatingSystem>
-		<rdf:type rdf:resource="http://open-services.net/ns/cm#ChangeRequest"/>
-		<oslc_cm:status>RESOLVED</oslc_cm:status>
-		<oslc:serviceProvider rdf:resource="http://localhost:8080/OSLC4JBugzilla/services/serviceProviders/1"/>
-		<bugz:platform>PC</bugz:platform>
-		<bugz:version>1.0</bugz:version>
-		<dcterms:created>2000-06-29T22:07:00.000-04:00</dcterms:created>
-		<dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Albright Overseas</dcterms:title>
-		<bugz:component>PoliticalBackStabbing</bugz:component>
-		<oslc_cm:severity>Unclassified</oslc_cm:severity>
-		<dcterms:modified>2009-11-14T14:36:54.000-05:00</dcterms:modified>
-		<bugz:priority>P4</bugz:priority>
-		<dcterms:identifier>17</dcterms:identifier>
-	  </rdf:Description>
-	  <rdf:Description rdf:about="http://localhost:8080/OSLC4JBugzilla/person?mbox=tara%40bluemartini.com">
-		<rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-	  </rdf:Description>
-	</rdf:RDF>
+    <?xml version="1.0" encoding="UTF-8"?>
+    <rdf:RDF
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:oslc_data="http://open-services.net/ns/servicemanagement/1.0/"
+      xmlns:oslc_rm="http://open-services.net/ns/rm#"
+      xmlns:oslc="http://open-services.net/ns/core#"
+      xmlns:bugz="http://www.bugzilla.org/rdf#"
+      xmlns:oslc_scm="http://open-services.net/ns/scm#"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/"
+      xmlns:oslc_qm="http://open-services.net/ns/qm#"
+      xmlns:dcterms="http://purl.org/dc/terms/"
+      xmlns:oslc_cm="http://open-services.net/ns/cm#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
+      <rdf:Description rdf:about="http://localhost:8080/OSLC4JBugzilla/services/1/changeRequests/17">
+      <dcterms:contributor rdf:resource="http://localhost:8080/OSLC4JBugzilla/person?mbox=tara%40bluemartini.com"/>
+      <bugz:operatingSystem>Windows NT</bugz:operatingSystem>
+      <rdf:type rdf:resource="http://open-services.net/ns/cm#ChangeRequest"/>
+      <oslc_cm:status>RESOLVED</oslc_cm:status>
+      <oslc:serviceProvider rdf:resource="http://localhost:8080/OSLC4JBugzilla/services/serviceProviders/1"/>
+      <bugz:platform>PC</bugz:platform>
+      <bugz:version>1.0</bugz:version>
+      <dcterms:created>2000-06-29T22:07:00.000-04:00</dcterms:created>
+      <dcterms:title rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral">Albright Overseas</dcterms:title>
+      <bugz:component>PoliticalBackStabbing</bugz:component>
+      <oslc_cm:severity>Unclassified</oslc_cm:severity>
+      <dcterms:modified>2009-11-14T14:36:54.000-05:00</dcterms:modified>
+      <bugz:priority>P4</bugz:priority>
+      <dcterms:identifier>17</dcterms:identifier>
+      </rdf:Description>
+      <rdf:Description rdf:about="http://localhost:8080/OSLC4JBugzilla/person?mbox=tara%40bluemartini.com">
+      <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+      </rdf:Description>
+    </rdf:RDF>
 
 Note the variety of namespace definitions near the top of the document that define short prefix names for properties (e.g., `dcterms`).
 
@@ -83,7 +83,7 @@ You can learn more about how our OSLC Bugzilla Adapter generates these represent
 
 ## Parsing an OSLC resource
 
-<div class="callout-box guidance">
+<div class="notice tip">
 <p><strong>Note</strong>: The following discusses using an RDF/XML parser. If you are writing Java, you could also use – in fact, we recommend using – <a href="http://wiki.eclipse.org/Lyo/LyoOSLC4J">OSLC4J</a> to convert RDF/XML representations into Java objects, which will most likely be easier to work with. Consider the following to be guidance if you choose to approach this another way.</p>
 </div>
 
@@ -116,7 +116,7 @@ For our implementation, we'll be using Jena.
 
 ### How to use Jena to parse RDF/XML resource
 
-![Jena icon](http://open-services.rtp.raleigh.ibm.com/images/jena_logo.png)
+![Jena icon](http://open-services.net/images/jena_logo.png)
 
 Jena is an open source Java library that offers a wide variety of RDF tools including a parser that can handle RDF/XML and other RDF serializations. Using Jena is straight-forward and should be easy for a Java developer.
 
@@ -126,36 +126,36 @@ Let's attempt to GET an OSLC Change Request via HTTP, but this time we will do i
 
 Note that the following is not a complete Java class:
 
-	import java.net.HttpURLConnection; // (1)
-	import java.net.URL;
-	import com.hp.hpl.jena.rdf.model.Model;
-	import com.hp.hpl.jena.rdf.model.ModelFactory;
-	import com.hp.hpl.jena.rdf.model.Property;
-	import com.hp.hpl.jena.rdf.model.Resource;
-	import com.hp.hpl.jena.rdf.model.Statement;
+    import java.net.HttpURLConnection; // (1)
+    import java.net.URL;
+    import com.hp.hpl.jena.rdf.model.Model;
+    import com.hp.hpl.jena.rdf.model.ModelFactory;
+    import com.hp.hpl.jena.rdf.model.Property;
+    import com.hp.hpl.jena.rdf.model.Resource;
+    import com.hp.hpl.jena.rdf.model.Statement;
 
-	// class declaration and other things omitted
+    // class declaration and other things omitted
 
-	String resourceURI = "http://localhost:8080/OSLC4JBugzilla/services/1/ChangeRequests/1";
-	URL url = new URL(resourceURI);  // (2)
-	HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-	conn.setRequestProperty("Accept", "application/rdf+xml");  // (3)
-						
-	Model model = ModelFactory.createDefaultModel();                
-	model.read(conn.getInputStream(), resourceURI); // (4)
+    String resourceURI = "http://localhost:8080/OSLC4JBugzilla/services/1/ChangeRequests/1";
+    URL url = new URL(resourceURI);  // (2)
+    HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+    conn.setRequestProperty("Accept", "application/rdf+xml");  // (3)
+          
+    Model model = ModelFactory.createDefaultModel();                
+    model.read(conn.getInputStream(), resourceURI); // (4)
 
-	Resource resource = model.getResource(resourceURI); // (5)
+    Resource resource = model.getResource(resourceURI); // (5)
 
-	// (6)
-	Property fixedProp = model.getProperty("http://open-services.net/ns/cm#fixed");
+    // (6)
+    Property fixedProp = model.getProperty("http://open-services.net/ns/cm#fixed");
 
-	Statement fixed = model.getProperty(resource, fixedProp); // (7)
-	System.err.println("Fixed = " + fixed.getString()); // (8)
+    Statement fixed = model.getProperty(resource, fixedProp); // (7)
+    System.err.println("Fixed = " + fixed.getString()); // (8)
 
-	// (9)
-	Property modifiedProp = model.getProperty("http://purl.org/dc/terms/modified");
-	Statement modified = model.getProperty(resource, modifiedProp);
-	System.err.println("Modified = " + modified.getString());
+    // (9)
+    Property modifiedProp = model.getProperty("http://purl.org/dc/terms/modified");
+    Statement modified = model.getProperty(resource, modifiedProp);
+    System.err.println("Modified = " + modified.getString());
 
 Here's what it does:
 
